@@ -1,0 +1,19 @@
+.top-header {
+  padding: $space-md 0;
+  background: $secondary-color;
+  height: 40px;  
+  top: 0;
+  z-index: 1000;
+  position: sticky;     
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 0;
+    font-weight: 550;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-top: -10px;
+  }
+}

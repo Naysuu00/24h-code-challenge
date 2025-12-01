@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+
+
+// COLORS
+$primary-color: #222430;
+$secondary-color: #f39c12;
+$text-color: #333;
+$header-color: #fff;
+$background-color-second: rgba(239, 247, 250, 1);
+$background-color: linear-gradient(
+  232deg,
+  rgba(32, 55, 70, 1) 100%,
+  rgba(70, 78, 112, 1) 0%
+);
+
+
+
+
+// FONT
+$font-family-base: 'Archivo', sans-serif;
+
+
+
+// SPACING
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 2rem;
+
+// BREAKPOINTS
+$breakpoint-sm: 640px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1200px;

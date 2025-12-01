@@ -1,0 +1,21 @@
+.hero {
+  padding: $space-lg 0;
+  background: lighten($primary-color, 40%);
+
+  &__text {
+    h1 {
+      @include responsive-font(1.5rem, 2rem, 2.5rem);
+      color: $primary-color;
+      margin-bottom: $space-md;
+    }
+    p {
+      margin-bottom: $space-md;
+    }
+  }
+
+  &__image {
+    img {
+      border-radius: 8px;
+    }
+  }
+}

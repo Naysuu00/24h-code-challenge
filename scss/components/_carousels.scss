@@ -1,0 +1,12 @@
+.carousel {
+  .carousel-cell {
+    width: 100%;
+    margin-right: $space-sm;
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+}
