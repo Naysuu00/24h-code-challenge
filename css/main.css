@@ -20,6 +20,10 @@ body {
   color: #333;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3 {
   font-weight: bold;
   margin-bottom: 1rem;
@@ -30,6 +34,7 @@ img {
   height: auto;
 }
 
+/* HEADER */
 .main-header {
   position: sticky;
   top: 0;
@@ -42,18 +47,13 @@ img {
   gap: 1rem;
 }
 .main-header .logo {
-  display: flex;
-  align-items: center;
-  margin-left: -83rem;
+  margin-left: -47rem;
 }
 .main-header .logo img {
   width: 50px;
   height: auto;
 }
 .main-header .hamburger-nav {
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
   cursor: pointer;
 }
 .main-header .hamburger-nav img {
@@ -61,24 +61,24 @@ img {
   height: auto;
 }
 .main-header .top-button {
-  margin-right: -82rem;
+  transform: translateX(415%);
 }
 .main-header .top-button button {
   padding: 0.8rem 2rem;
-  font-size: 1rem;
-  letter-spacing: 1.5px;
   background: #222430;
   color: #fff;
   border-radius: 36px;
   cursor: pointer;
   transition: background 0.3s;
+  border: none;
+  font-size: 1rem;
 }
 .main-header .top-button button:hover {
   background: rgb(12.8536585366, 13.6097560976, 18.1463414634);
 }
 .main-header .cart-icon {
   position: relative;
-  margin-right: 5rem;
+  margin-right: 2rem;
 }
 .main-header .cart-icon img {
   width: 40px;
@@ -100,18 +100,74 @@ img {
   font-weight: bold;
 }
 
-/* Responsive tweaks */
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: -300px; /* hidden by default */
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  padding: 2rem;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+.sidebar .close-sidebar {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+.sidebar ul {
+  list-style: none;
+  margin-top: 2rem;
+  padding: 0;
+}
+.sidebar ul li {
+  margin: 1rem 0;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.sidebar ul li a:hover {
+  color: #222430;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* OVERLAY */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .main-header {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-wrap: wrap;
   }
-  .main-header .logo {
-    margin-bottom: 0.5rem;
-    margin-right: 10rem;
+  .main-header .logo img {
+    width: 100px;
   }
-  .main-header .top-button {
-    margin-top: 0.5rem;
+  .main-header .hamburger-nav img {
+    width: 35px;
   }
   .main-header .top-button button {
     padding: 0.6rem 1.5rem;
@@ -123,10 +179,10 @@ img {
 }
 @media (max-width: 480px) {
   .main-header {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
   .main-header .logo img {
-    width: 50px;
+    width: 80px;
   }
   .main-header .hamburger-nav img {
     width: 30px;
@@ -1053,6 +1109,10 @@ body {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
