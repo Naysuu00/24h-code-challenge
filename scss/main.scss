@@ -62,6 +62,11 @@ h1, h2, h3 {
   margin-top: 50px;
 }
 
+.right-content-container{
+  margin-top: 12rem !important;
+}
+
+
 .left-button button{
   padding: 1.3rem 7rem;
   background-color: $secondary-color;
@@ -94,7 +99,8 @@ h1, h2, h3 {
 
 
 .satisfied-rating{
-  margin-top: 200px;
+  transform: translateY(30%) !important;
+  z-index: 2 !important;
 
 }
 
@@ -129,7 +135,7 @@ h1, h2, h3 {
   width: 100%;             
   margin: 0 auto;          
   padding: 2rem 0; 
-  transform: translateY(-530%);        
+  transform: translateY(-400%);        
 }
 
 .top-tagline .button {
@@ -147,7 +153,7 @@ h1, h2, h3 {
 
 .left-tagline{
   float: left;
-  margin-top: -39%;
+  margin-top: -28%;
   margin-left: 300px;  
   
 }
@@ -254,17 +260,482 @@ h1, h2, h3 {
 
 
 /*  MOBILE responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 412px) {
+
+ html, body{
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  * {
+  outline: 1px solid red;
+}
+
+
+
+   .home-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+   .top-button{
+    margin-right: 40rem !important;
+   
+  }
+
+  .top-button button{
+    padding: 1rem 2rem !important;
+  }
+
+  .cart-icon{
+    padding-right: -5rem !important;
+  }
+
+
+  /* LEFT CONTENT */
+  .left-content-container {
+    width: 100%;
+  }
+
+  .left-content-container h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .left-content-container p {
+    font-size: 0.95rem;
+  }
+
+  .left-button button {
+    width: 100%;
+    max-width: 380px;
+    padding: 0.75rem;
+  }
+
+ 
+  /* RATING SECTION */
+  .satisfied-rating {
+    margin-top: 1.5rem;
+  }
+
+  .satisfied-rating img {
+    width: 108px;
+  }
+
+  .satisfied-rating p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .customer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .customer-icon img {
+    width: 24px;
+  }
+
+ 
+  .right-content-container {
+    width: 100%;
+  }
+
+  .group-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5rem;
+    margin-right: -2rem !important;
+    height: auto;
+  }
   .bottom-container {
     flex-direction: column;  
     max-width: 100%;
-    gap: 2rem;                
+    gap: 2rem;             
     text-align: center;
   }
 
   .bottom-container div {
     width: 100%;
   }
+
+
+  .more-info {
+    padding: 25rem 1rem;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    
+  }
+
+  /* TOP TAGLINE BUTTON */
+  .top-tagline {
+    text-align: center;
+    align-items: center;
+    transform: translateX(-10%) !important;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .top-tagline .button {
+    font-size: 1rem;
+    margin-top: -38rem !important;
+    margin-left: 5rem;
+    width: 450px !important;
+    border-radius: 36px !important;
+    padding: 10px 30px !important;
+  
+  }
+
+ 
+
+  /* LEFT CONTENT */
+  .left-tagline {
+    display: flex;
+    float: none !important;
+    flex-direction: column; 
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    margin-top: -15rem !important;
+    gap: 1rem;
+  }
+
+  .left-tagline h1 {
+    font-size: 2rem !important;
+    width: 450px !important;
+    line-height: 1.3;
+  }
+
+  .left-tagline p {
+    font-size: 0.95rem;
+    width: 300px !important;
+    line-height: 1.5;
+  }
+
+  .divider {
+    width: 60%;
+    margin: 1rem auto;
+  }
+
+  /* FEATURES LIST */
+   .features-list {
+    width: 100%;
+    padding: 0 16px !important;
+  }
+
+  .features-list p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+ 
+  .right-tagline-img {
+    margin-top: 5rem !important;
+    display: flex;
+    justify-content: center;
+    margin-right: 43rem !important;
+  }
+
+  .right-tagline-img img {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    height: auto;
+    gap: 100px;
+    padding: 0 46px;
+    margin-top: 10rem !important;
+  }
+
+  .cell img { 
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .cell p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+.wide-image {
+  width: 100% !important;
+  max-width: 360px !important;        
+  height: 280px !important;
+  margin-left: -1rem !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.benefits-section{
+   text-align: center !important;
+   align-items: center !important;
+   justify-content: center !important;
+   margin-left: -12rem !important;
+  
+}
+
+
+.left-benefits-tagline{
+    width: 150px !important;
+}
+
+
+.left-benefits-tagline h1{
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+}
+
+
+.benefits-list {
+  width: 100% !important;
+  padding: 0 16px !important;
+  margin-left: -50rem !important;
+  margin-top: -35rem !important;
+
+}
+
+
+
+.benefits-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start !important;
+  gap: 10px;
+  text-align: start !important;
+  font-size: 18px !important;
+  line-height: 1.4;
+}
+
+.benefits-list li img {
+  width: 18px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* BENEFITS */
+.benefits {
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 8rem !important;
+}
+
+.product-set{
+  width: 100% !important;
+  height: 130vh !important;
+  margin-left: -5rem !important;
+}
+
+
+
+.product-set {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  width: 500px !important;
+  text-align: center !important;
+}
+
+/* TEXT CONTENT */
+.product-info span {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-right: 5rem !important;
+}
+
+.product-info h2 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-right: 6rem !important;
+  margin-top: 2rem !important;
+  margin: 0.5rem 0;
+}
+
+.product-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  width: 300px !important;
+  margin-bottom: 1rem;
+  margin-top: 2rem !important;
+  margin-right: 5rem !important;
+  
+}
+
+/* LIST */
+.product-info ul {
+  padding: 0;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.product-info li {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+/* BUTTON */
+.product-info button {
+  width: 100%;
+  max-width: 320px;
+  margin: 3rem auto 0;
+  padding: 0.9rem;
+  margin-left: -5rem !important;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.product-images {
+  display: flex;
+  justify-content: center;
+}
+
+.product-images img {
+  width: 100%;
+  max-width: 300px;
+}
+
+
+
+.ingredients-section {
+  padding: 2rem 1rem;
+}
+
+/* HEADER */
+.ingredients-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ingredients-header h2 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.ingredient-btn {
+  align-self: center;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.85rem;
+}
+
+/* GRID */
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+  gap: 1rem;
+}
+
+/* CARD */
+.ingredient-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ingredient-card img {
+  width: 100%;
+  max-width: 140px;
+}
+
+.ingredient-card h3 {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.ingredient-card p {
+  font-size: 0.75rem;
+}
+
+ 
+/* Three formulas */
+
+.three-formulas {
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+/* TAGLINE */
+.tagline button {
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+}
+
+/* TITLES */
+.section-title {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* GRID */
+.formula-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ITEMS */
+.face-wash-item,
+.moisturizer-item,
+.cream-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* TEXT */
+.text-block h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.text-block p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* IMAGE */
+.formula-grid img {
+  max-width: 260px;
+}
+
+  
 }
 
 
@@ -293,11 +764,14 @@ h1, h2, h3 {
     margin-bottom: 3rem;
   }
 
+  
+
   .steps {
     display: flex;
     justify-content: center;
     gap: 2.5rem;
     margin-top: 2rem;
+    margin-left: 2.5rem;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -332,6 +806,18 @@ h1, h2, h3 {
           width: 100%;
           border-radius: 20px;
         }
+
+
+        .divider-wide{
+          border: none;   
+          text-align: center;
+          align-items: center; 
+          justify-content: center !important;         
+          height: 1px;   
+          opacity: 0.2;
+          width: 50px !important;               
+       
+        }
       }
 
       .product-row {
@@ -350,6 +836,8 @@ h1, h2, h3 {
           color: #333;
           line-height: 1.3;
         }
+
+        
       }
     }
   }
@@ -375,6 +863,8 @@ h1, h2, h3 {
     line-height: 1.6;
   }
 
+ 
+
 }
 
 
@@ -396,7 +886,8 @@ h1, h2, h3 {
   width: 100vw;
   height: 100vh; 
   background-size: cover;
-  background: url('/ecommerce-web/assets/images/wide-banner.jpg') no-repeat center center/cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
  
  
@@ -406,7 +897,7 @@ h1, h2, h3 {
   gap: 20px;              
   list-style: none;       
   padding: 0;
-  margin: 20px  100px;
+  margin: 120px  100px !important;
   width: 1700px;
   text-align: center;
   align-items: center;

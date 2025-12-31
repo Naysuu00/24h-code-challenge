@@ -53,6 +53,20 @@
 
 }
 
+
+.subscribe-form input[type="email"] {
+  color: $text-color !important; 
+  background-color: $header-color; 
+}
+
+
+input[type="email"]:-webkit-autofill {
+  -webkit-text-fill-color: black !important;
+  transition: background-color 5000s ease-in-out; 
+}
+
+
+
 .submit-btn {
     padding: 15px 20px;
     background-color: $primary-color; 
@@ -168,7 +182,27 @@
     max-width: 450px;
 }
 
+@media (max-width: 412px) {
+.main-footer{
+  height: auto !important;
+  transform: translateY(50%) !important;
+  width: 420px !important;
+  margin-left: -3rem !important;
+}
 
+.subscribe-form{
+  width: 100% !important;
+}
+
+.subscribe-form {
+  margin-left: -1rem !important;
+}
+.subscribe-form button{
+   margin-left: -4rem !important;
+   padding: 1.3rem 1.5rem !important;
+   margin-top: -1px !important;
+}
+}
 @media (min-width: 768px) {
     .main-footer {
         padding: 60px 40px;
