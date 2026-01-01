@@ -128,18 +128,19 @@
     }
 
     .product-info button {
-      background-color: #1a1a1a;
+      background-color: $primary-color;
       color: #fff;
       border: none;
       padding: 1.2rem 5rem;
       border-radius: 36px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;;
     }
 
     .product-info button:hover {
-      background-color: #333;
+      transform: scale(1.1) !important;
+      background-color:  darken($primary-color, 10%);
     }
 
     .product-images {
@@ -479,95 +480,63 @@
 }
 
 .fans {
-  padding: 2rem 1rem;
-  text-align: center;
-}
+    padding: 2rem 1rem;
+    
+  }
 
-.fans h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-}
+  /* FORCE COLUMN LAYOUT */
+  .card-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25rem;
+    width: 100%;
+  }
 
-/* GRID */
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
+  /* Full-width cards */
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
 
-/* CARD */
-.card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
+  /* Image sizing */
+  .img-box {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
 
-/* IMAGE */
-.img-box {
-  position: relative;
-  width: 100%;
-}
+  /* Center buttons properly */
+  .play {
+    width: 48px;
+    height: 48px;
+  }
 
-.img-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
+  .mute-btn {
+    width: 32px;
+    height: 32px;
+  }
 
+  /* Text scaling for mobile */
+  .fans h2 {
+    font-size: 1.4rem;
+  }
 
-.play,
-.mute-btn {
-  position: absolute;
-  background: rgba(0,0,0,0.6);
-  border: none;
-  border-radius: 50%;
-  padding: 0.5rem;
-}
+  .name {
+    font-size: 1rem;
+  }
 
-.play {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  .price {
+    font-size: 0.95rem;
+  }
 
-.mute-btn {
-  bottom: 10px;
-  right: 10px;
-}
+  .btn-add {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
 
-/* INFO */
-.info {
-  padding: 1rem;
-}
-
-.stars {
-  width: 80px;
-  margin-bottom: 0.5rem;
-}
-
-.name {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.price {
-  font-size: 0.9rem;
-  margin: 0.3rem 0 0.8rem;
-}
-
-/* ADD BUTTON */
-.btn-add {
-  width: 100%;
-  padding: 0.7rem;
-  border-radius: 25px;
-  background: black;
-  color: white;
-  font-size: 0.9rem;
-  border: none;
-}
-
+  
+  body {
+    overflow-x: hidden;
+  }
 
      }
 
@@ -916,49 +885,103 @@
 /* FANS */
 
 .fans {
-  padding: 3rem 1.2rem;
+  padding: 10rem 1.25rem;
+}
+
+.fans h2 {
   text-align: center;
+  font-size: 4rem !important;
+  font-weight: bold !important;
+  margin-bottom: 2.5rem;
+}
 
-  /* MUTE BUTTON */
-  .mute-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0,0,0,0.4);
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    backdrop-filter: blur(6px);
-
-    img {
-      width: 18px;
-      height: 18px;
-      filter: brightness(100%);
-    }
-
-    &:hover {
-      background: rgba(0,0,0,0.6);
-    }
-  }
-
-  h2 {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 4rem;
-    margin-bottom: 1.8rem;
-    color: $primary-color;
-  }
-
-
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1600px !important;
+  margin: 0 auto;
 }
 
 
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
 
+
+.img-box {
+  position: relative;
+  width: auto !important;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  
+}
+
+.img-box img {
+  width: auto !important;
+  height: 230% !important;
+  object-fit: cover !important;
+
+}
+
+.play,
+.mute-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.play {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mute-btn {
+  bottom: 10px;
+  right: 10px;
+}
+
+
+.info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.info .stars {
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.price {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 1rem 2rem !important;
+  background: $primary-color;
+  color: $header-color;
+  font-weight: 520;
+  padding: 0.75rem;
+  border-radius: 999px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-add:hover{
+  background: darken($primary-color, 10%);
+  transform: scale(1.1) !important;
+}
 
 .set {
   display: flex;

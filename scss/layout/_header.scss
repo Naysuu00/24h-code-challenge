@@ -38,8 +38,10 @@
     transition: background 0.3s;
     border: none;
     font-size: 1rem;
+     transition: transform 0.25s ease, box-shadow 0.25s ease;
 
     &:hover {
+      transform: scale(1.1) !important;
       background: darken($primary-color, 10%);
     }
   }

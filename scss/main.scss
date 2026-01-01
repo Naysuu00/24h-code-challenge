@@ -18,15 +18,16 @@
 
 
 
-body {
+html, body {
   font-family: $font-family-base;
   font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
   color: $text-color;
-}
-
-html {
   scroll-behavior: smooth;
 }
+
+
 h1, h2, h3 {
   margin-bottom: $space-md;
 }
@@ -917,4 +918,44 @@ h1, h2, h3 {
 
 .benefits-list img {
   width: 20px;
+}
+
+
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+.grid-margin-x {
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-4px);
 }
